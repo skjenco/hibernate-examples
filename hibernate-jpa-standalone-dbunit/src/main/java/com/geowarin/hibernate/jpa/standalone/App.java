@@ -25,7 +25,8 @@ public class App {
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		
-		User found = entityManager.find(User.class, 1L);
+		User found = entityManager.find(User.class, 2L);
+		log.info(found.getName());
 		log.info("found=" + found);
 	}
 }
