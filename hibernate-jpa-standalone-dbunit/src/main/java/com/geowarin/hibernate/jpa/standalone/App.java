@@ -4,6 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import com.geowarin.hibernate.jpa.standalone.model.Address;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,5 +29,11 @@ public class App {
 		User found = entityManager.find(User.class, 2L);
 		log.info(found.getName());
 		log.info("found=" + found);
+		log.info("the person address = " + found.getAddress().getStreet());
+
+		Address address = entityManager.find(Address.class,1L);
+
+		log.info(address.getStreet());
+
 	}
 }

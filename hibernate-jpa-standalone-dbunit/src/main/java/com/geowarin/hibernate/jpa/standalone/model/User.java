@@ -3,12 +3,7 @@ package com.geowarin.hibernate.jpa.standalone.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Table(name = "users")
 @Entity
@@ -22,6 +17,10 @@ public class User implements Serializable {
 	
 	@Column(name = "name", nullable = false, unique=true, length=50)
 	private String name;
+
+	@ManyToOne
+	@JoinColumn(name = "ADDRESS_ID")
+	private Address address;
 
 	public long getId() {
 		return id;
@@ -37,6 +36,14 @@ public class User implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
 	@Override
