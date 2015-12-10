@@ -2,6 +2,7 @@ package com.iskj.hibernate.jpa.standalone;
 
 import com.iskj.hibernate.jpa.standalone.model.Address;
 import com.iskj.hibernate.jpa.standalone.model.User;
+import com.iskj.hibernate.jpa.tools.JpaUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,8 +16,8 @@ public class App {
 
     public static void main(String[] args) {
 
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        //EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
+        EntityManager entityManager = JpaUtil.getEntityManager();
 
         User found = entityManager.find(User.class, 2L);
         log.info(found.getName());
