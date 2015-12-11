@@ -6,7 +6,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.iskj.hibernate.jpa.standalone.model.User;
+import com.iskj.model.User;
 
 
 public class AppTest extends AbstractDbUnitJpaTest {

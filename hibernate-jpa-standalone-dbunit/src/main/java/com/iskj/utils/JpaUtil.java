@@ -1,4 +1,4 @@
-package com.iskj.hibernate.jpa.tools;
+package com.iskj.utils;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;

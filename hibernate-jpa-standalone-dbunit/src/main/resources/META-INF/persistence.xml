@@ -3,8 +3,8 @@
     <persistence-unit name="persistence" transaction-type="RESOURCE_LOCAL">
 
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-			<class>com.iskj.hibernate.jpa.standalone.model.User</class>
-			<class>com.iskj.hibernate.jpa.standalone.model.Address</class>
+			<class>com.iskj.model.User</class>
+			<class>com.iskj.model.Address</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>

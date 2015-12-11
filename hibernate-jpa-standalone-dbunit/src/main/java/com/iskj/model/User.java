@@ -1,5 +1,5 @@
 
-package com.iskj.hibernate.jpa.standalone.model;
+package com.iskj.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
